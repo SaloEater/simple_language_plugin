@@ -1,0 +1,1 @@
+local a = test_func("simple:prop")
