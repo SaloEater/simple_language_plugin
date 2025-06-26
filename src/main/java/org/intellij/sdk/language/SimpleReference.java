@@ -53,4 +53,8 @@ final class SimpleReference extends PsiPolyVariantReferenceBase<PsiElement> {
     return variants.toArray();
   }
 
+  @Override
+  public boolean isReferenceTo(@NotNull PsiElement element) {
+    return true;
+  }
 }
