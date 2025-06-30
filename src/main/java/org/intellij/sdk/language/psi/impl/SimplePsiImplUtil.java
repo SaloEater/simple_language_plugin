@@ -12,6 +12,7 @@ import org.intellij.sdk.language.psi.SimpleTypes;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
+import java.security.Key;
 
 public class SimplePsiImplUtil {
 
@@ -35,7 +36,7 @@ public class SimplePsiImplUtil {
   }
 
   public static String getName(SimpleProperty element) {
-    return getKey(element);
+    return element.getNode().findChildByType(SimpleTypes.KEY).getText();
   }
 
   public static PsiElement setName(SimpleProperty element, String newName) {

@@ -4,6 +4,8 @@ package org.intellij.sdk.language.psi.impl;
 
 import com.intellij.extapi.psi.ASTWrapperPsiElement;
 import com.intellij.lang.ASTNode;
+import com.intellij.psi.search.GlobalSearchScope;
+import com.intellij.psi.search.SearchScope;
 import org.intellij.sdk.language.psi.SimpleNamedElement;
 import org.jetbrains.annotations.NotNull;
 
@@ -13,4 +15,13 @@ public abstract class SimpleNamedElementImpl extends ASTWrapperPsiElement implem
     super(node);
   }
 
+  /*@Override
+  public @NotNull SearchScope getUseScope() {
+    return GlobalSearchScope.allScope(getProject());
+  }
+
+  @Override
+  public @NotNull GlobalSearchScope getResolveScope() {
+    return super.getResolveScope();
+  }*/
 }

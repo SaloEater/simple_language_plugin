@@ -40,17 +40,6 @@ final class SimpleReferenceContributor extends PsiReferenceContributor {
                         return PsiReference.EMPTY_ARRAY;
                     }
                 });
-
-        registrar.registerReferenceProvider(
-                PlatformPatterns
-                        .psiElement(PsiElement.class),
-                new PsiReferenceProvider() {
-                    @Override
-                    public PsiReference @NotNull [] getReferencesByElement(@NotNull PsiElement element,
-                                                                           @NotNull ProcessingContext context) {
-                        return PsiReference.EMPTY_ARRAY;
-                    }
-                });
     }
 
 
